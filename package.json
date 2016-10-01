@@ -1,0 +1,14 @@
+{
+  "name": "twitterbot",
+  "version": "1.0.0",
+  "description": "twitter rest api bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wayne Sie",
+  "license": "MIT",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
