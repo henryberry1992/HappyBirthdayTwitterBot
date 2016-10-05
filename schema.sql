@@ -1,0 +1,5 @@
+CREATE TABLE twitter_users
+(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	screen_name VARCHAR(80) NOT NULL
+);
