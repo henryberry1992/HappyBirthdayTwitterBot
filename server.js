@@ -30,7 +30,7 @@ function getTweet(err,data,response)
 		{
 			for(var i =0; i<jsondata.length; i++)
 			{
-				if(followCountLimit(jsondata[i].user.followers_count) && checkUserMentions(jsondata[i].entities.user_mentions))
+				if(checkUserMentions(jsondata[i].entities.user_mentions))
 				{
 					usernames = jsondata[i].entities.user_mentions.map(function(a) 
 						{
@@ -67,7 +67,6 @@ function getTweet(err,data,response)
 			}
 		}
 	}
-	
 }
 
 function postTweet(name)
@@ -103,14 +102,15 @@ function checkUserMentions(data)
 	return data.length>0;
 }
 
-function followCountLimit(data)
-{
-	return data <=10000;
-}
+// function followCountLimit(data)
+// {
+// 	return data <=10000;
+// }
+// if(followCountLimit(jsondata[i].user.followers_count) && checkUserMentions(jsondata[i].entities.user_mentions))
 
 getTweet(); 
 
-setInterval(getTweet, 1000*60*10);
+setInterval(getTweet, 1000*60*6);
 
 
 

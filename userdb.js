@@ -7,7 +7,6 @@ var connection = mysql.createConnection
 	database: 'twitter_users'
 });
 
-
 module.exports =
 {
 	checkUser: function(screen_name,callback)
